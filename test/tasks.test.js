@@ -1,35 +1,36 @@
 require('dotenv').config();
-const mongoose = require('mongoose');
 const request = require('supertest');
+const mongoose = require('mongoose');
 const connect = require('../lib/utils/connect');
 const app = require('../lib/app');
 
-const createTask = task => {
+const createNote = task => {
   return request(app)
     .post('/api/v1/tasks')
     .send(task)
-    .then(res => res.body)
-}
+    .then(res => res.body);
+};
 
-describe('tasks routes', () => {
+describe('task routes', () => {
   beforeAll(() => {
     return connect();
   });
+
   beforeEach(() => {
     return mongoose.connection.dropDatabase();
   });
+
   afterAll(() => {
     return mongoose.connection.close();
   });
 
-  it('can create a task via POST route', () => {
+  it('can create a task via POST', () => {
     return request(app)
       .post('/api/v1/tasks')
       .send({ title: "POST-it", description: "Help me do a thing!" })
       .then(res => {
-        console.log(res.text);
         expect(res.body).toEqual({
-          _id: expect.any(String),          
+          _id: expect.any(String),
           title: "POST-it",
           description: "Help me do a thing!",
           __v: 0
@@ -37,13 +38,11 @@ describe('tasks routes', () => {
       });
   });
 
-  it('can get a list of tasks via GET route', async() => {
-    // await so tasks are created, 
-    // *then* array of them is returned
+  it('can get a list of tasks via GET', async() => {
     const tasks = await Promise.all([
-      createTask({ title: 'test-task', description: 'I exist!' }),
-      createTask({ title: 'test-task-two', description: 'I also exist!' })
-    ])
+      createNote({ title: 'Fetched task A', body: 'GET me!' }),
+      createNote({ title: 'Fetched task B', body: 'GET me!' })
+    ]);
 
     return request(app)
       .get('/api/v1/tasks')
@@ -52,4 +51,3 @@ describe('tasks routes', () => {
       });
   });
 });
-
