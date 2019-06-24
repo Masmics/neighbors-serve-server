@@ -36,23 +36,4 @@ describe('tasks routes', () => {
         });
       });
   });
-
-//   it('can get a list of tasks via GET route', async() => {
-//     // await so notes are created, 
-//     // *then* array of them is returned
-//     const tasks = await Promise.all([
-//       createTask({ title: 'test-task', description: 'I exist!' }),
-//       createTask({ title: 'test-task-two', description: 'I also exist!' })
-//     ])
-
-//     return request(app)
-//       .get('/api/v1/tasks')
-//       .then(res => {
-//         expect(res.body).toEqual([
-//           createTask({ title: 'test-task', description: 'I exist!' }),
-//           createTask({ title: 'test-task-two', description: 'I also exist!' })
-//         ])
-//       });
-//   })
-// });
-
+});
