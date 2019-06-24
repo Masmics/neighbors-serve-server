@@ -1,4 +1,7 @@
 language: node_js
 node_js: node
-# services: mongodb
-# env: MONGODB_URI=mongodb://localhost:27017/tasks
+deploy:
+  provider: heroku
+  app: neighbors-serve-server
+  api_key:
+    secure: c6mf6mkbijOE80deVlMEQ/dyhHQOkameY8BBJVuaP5cEALYI7CVl1Zl/IxE4ZBgjllXk3JFsqglAcgqfe1M0mKs+CjZTLSzT7ynUm9zqwONltw0f3W12ucjMama7U8rpb0lMeXxb4sJdClNr2bYI1Kb7Fr2GxcXzVMCfjyYXDm3WyQhCsRd4qVZPe/aOKlJtdB1FbwuffvE3hEEf3x7Oi0SRQ5JFKpfDtg/rLE/8SI46UIYPTYO49ibLgLOk2Ry/UAyMYct4c/9A/tTzXim3A7L+dycPZrU0t6dpQhVsRpn19gvSO0898A3IGKdcKZiKqVdfhMBddIEsBbHzqLQ7etWDQIRat8v38Nnbd7/Z5NH6UCMUdWJX6f6lCSITDPkA2KqhR239RtNN+TpUBvUEXlC2IT5u4spRv9pCFll4DtumLeG9gHBpEDONSBAI37P1RRw/6ODCKiudq7NoLzcIqUsmaXDkPjD/+BAVt1+dTUukVn6nTFmSS1nwl3Jd/Sd4aa1j4nB3uLNkMBeDGn9P2LMCoOlUaz7xOHTuTPPSYrhwphfEqfRQMk8AQp3U98/aCXB00LdUhvfKSHi0Y40ptDbwBkHntwqnhwYKxzD/bNk5Svxmz70qkxx+RcUlBWn/HhtSk7PxiP6Nc8AvDaqGpzovanKR6aye4OAjDnLcpOA=
