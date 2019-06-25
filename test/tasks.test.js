@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 const connect = require('../lib/utils/connect');
 const app = require('../lib/app');
 
-const createNote = task => {
+const createTask = task => {
   return request(app)
     .post('/api/v1/tasks')
     .send(task)
@@ -40,8 +40,8 @@ describe('task routes', () => {
 
   it('can get a list of tasks via GET', async() => {
     const tasks = await Promise.all([
-      createNote({ title: 'Fetched task A', body: 'GET me!' }),
-      createNote({ title: 'Fetched task B', body: 'GET me!' })
+      createTask({ title: 'Fetched task A', body: 'GET me!' }),
+      createTask({ title: 'Fetched task B', body: 'GET me!' })
     ]);
 
     return request(app)
