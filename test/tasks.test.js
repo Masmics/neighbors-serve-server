@@ -27,12 +27,17 @@ describe('task routes', () => {
   it('can create a task via POST', () => {
     return request(app)
       .post('/api/v1/tasks')
-      .send({ title: "POST-it", description: "Help me do a thing!" })
+      .send({ 
+        title: "POST-it", 
+        description: "Help me do a thing!", 
+        // creator: "I made this!" 
+      })
       .then(res => {
         expect(res.body).toEqual({
           _id: expect.any(String),
           title: "POST-it",
           description: "Help me do a thing!",
+          // creator: "I made this!",
           __v: 0
         });
       });
