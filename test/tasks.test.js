@@ -45,8 +45,8 @@ describe('task routes', () => {
 
   it('can get a list of tasks via GET', async() => {
     const tasks = await Promise.all([
-      createTask({ title: 'Fetched task A', body: 'GET me!' }),
-      createTask({ title: 'Fetched task B', body: 'GET me!' })
+      createTask({ title: 'Fetched task B', body: 'GET me!' }),
+      createTask({ title: 'Fetched task A', body: 'GET me!' })
     ]);
 
     return request(app)
