@@ -3,8 +3,8 @@ const request = require('supertest');
 describe('task routes placeholder for debugging', () => {
   it('exists', () => {
     expect.anything();
-  })
-})
+  });
+});
 
 // require('dotenv').config();
 // const request = require('supertest');
@@ -32,24 +32,24 @@ describe('task routes placeholder for debugging', () => {
 //     return mongoose.connection.close();
 //   });
 
-  // it('can create a task via POST', () => {
-  //   return request(app)
-  //     .post('/api/v1/tasks')
-  //     .send({ 
-  //       title: "POST-it", 
-  //       description: "Help me do a thing!", 
-  //       // author: req.user.sub
-  //     })
-  //     .then(res => {
-  //       expect(res.body).toEqual({
-  //         _id: expect.any(String),
-  //         title: "POST-it",
-  //         description: "Help me do a thing!",
-  //         author: expect.any(String) //expect.any(Object),
-  //         __v: 0
-  //       });
-  //     });
-  // });
+// it('can create a task via POST', () => {
+//   return request(app)
+//     .post('/api/v1/tasks')
+//     .send({ 
+//       title: "POST-it", 
+//       description: "Help me do a thing!", 
+//       // author: req.user.sub
+//     })
+//     .then(res => {
+//       expect(res.body).toEqual({
+//         _id: expect.any(String),
+//         title: "POST-it",
+//         description: "Help me do a thing!",
+//         author: expect.any(Object) //expect.any(String),
+//         __v: 0
+//       });
+//     });
+// });
 
 //   it('can get a list of tasks via GET', async() => {
 //     const tasks = await Promise.all([
