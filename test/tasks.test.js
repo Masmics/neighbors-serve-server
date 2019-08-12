@@ -32,25 +32,6 @@ describe('task routes placeholder for debugging', () => {
 //     return mongoose.connection.close();
 //   });
 
-// it('can create a task via POST', () => {
-//   return request(app)
-//     .post('/api/v1/tasks')
-//     .send({ 
-//       title: "POST-it", 
-//       description: "Help me do a thing!", 
-//       // author: req.user.sub
-//     })
-//     .then(res => {
-//       expect(res.body).toEqual({
-//         _id: expect.any(String),
-//         title: "POST-it",
-//         description: "Help me do a thing!",
-//         author: expect.any(Object) //expect.any(String),
-//         __v: 0
-//       });
-//     });
-// });
-
 //   it('can get a list of tasks via GET', async() => {
 //     const tasks = await Promise.all([
 //       createTask({ title: 'Fetched task B', description: 'GET me!' }),
@@ -61,7 +42,7 @@ describe('task routes placeholder for debugging', () => {
 //       .get('/api/v1/tasks')
 //       .then(res => {
 //         // expect(res.body).toEqual(tasks);
-//         expect.anything()
+//         expect.anything();
 //       });
 //   });
 // });
